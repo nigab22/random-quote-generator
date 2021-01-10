@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
-
 import './Quotes.css';
 
 function Quotes({ changeColor }) {
@@ -85,7 +84,7 @@ function Quotes({ changeColor }) {
     ];
 
     const numColors = colors.length - 1;
-    const randomNum = Math.round(Math.random() * 13);
+    const randomNum = Math.round(Math.random() * numColors);
     changeColor(colors[randomNum][0]);
     setColor(colors[randomNum][1]);
   };
